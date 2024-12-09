@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@500&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    background: linear-gradient(135deg, #1c1c1c, #343a40); /* Tons de cinza escuro e preto */
+    background-image: url('https://www.transparenttextures.com/patterns/diagmonds-light.png');
+    background-repeat: repeat;
+    min-height: 100vh;
+    margin: 0;
+    padding: 10px;
+}
+
+/* Enhance the Visual Design */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    background-color: #000000; /* Preto */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header img {
+    width: 50px;
+    height: auto;
+    margin-right: 15px;
+    filter: invert(1); /* Inverter as cores para tornar o logo visível no fundo preto */
+}
+
+header h2 {
+    color: #d4af37; /* Dourado */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    margin: 0;
+}
+
+h1 {
+    margin-top: 50px;
+    color: #34495e;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 42px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+/* Improve Link Presentation with CSS Grid */
+ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+li {
+    margin: 15px auto;
+    background-color: #ffffff;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra mais intensa */
+    background: linear-gradient(145deg, #ffffff, #f9f9f9); /* Gradiente sutil */
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+    max-width: 400px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Add Tooltip Styles */
+li:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    white-space: nowrap;
+    font-size: 12px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+li:hover::after {
+    opacity: 1;
+}
+
+li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3); /* Sombra mais pronunciada */
+    background-color: #f0f0f0; /* Fundo mais suave ao passar o mouse */
+}
+
+a {
+    text-decoration: none;
+    color: #d4af37; /* Dourado para links */
+    font-size: 22px;
+    font-weight: 700;
+    transition: color 0.3s, transform 0.3s;
+    margin-left: 15px;
+    position: relative;
+}
+
+a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #1f618d;
+    transition: width 0.3s;
+}
+
+a:hover::after {
+    width: 100%;
+    background-color: #c0c0c0; /* Prata no hover */
+}
+
+a:active {
+    color: #16a085;
+    transform: scale(0.98);
+}
+
+a:hover {
+    color: #1f618d;
+}
+
+.icon {
+    width: 30px;
+    height: auto;
+    transition: transform 0.3s;
+    max-width: 100%;
+    margin-right: 15px;
+}
+
+/* New styles for responsive design */
+@media (max-width: 600px) {
+    li {
+        padding: 15px 20px;
+        max-width: 90%;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    a {
+        font-size: 16px;
+    }
+
+    body {
+        padding: 5px;
+    }
+}
+
+@media (min-width: 601px) {
+    ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+/* Styles for footer */
+footer {
+    margin-top: 40px;
+    padding: 20px 0;
+    background-color: #f8f8f8;
+    color: #666;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    border-top: 1px solid #bdc3c7; /* Borda superior fina */
+}
+
+footer .social-icons {
+    margin-top: 10px;
+}
+
+footer .social-icons a {
+    margin: 0 10px;
+    display: inline-block;
+    transition: transform 0.3s;
+}
+
+footer .social-icons a:hover {
+    transform: scale(1.2);
+}
+
+footer .social-icons img {
+    width: 24px;
+    height: 24px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 16px;
+    color: #7f8c8d;
+    font-family: 'Montserrat', sans-serif; /* Fonte mais elegante */
+}
+
+/* Ensure Accessibility */
+li a {
+    outline: none;
+}
+
+li a:focus {
+    outline: 2px dashed #1f618d;
+    outline-offset: 4px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Add "Back to Top" Button Styles */
+#backToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #d4af37; /* Dourado */
+    color: #000000; /* Preto */
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    display: none; /* Hidden by default */
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#backToTop:hover {
+    background-color: #c0c0c0; /* Prata no hover */
+    transform: scale(1.1);
+}
+
+/* Smooth Scroll Behavior */
+html {
+    scroll-behavior: smooth;
+}
