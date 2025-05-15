@@ -1,55 +1,146 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meus Links</title>
+    <title>Bruno Tulux | Links</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <meta name="description" content="Links e projetos de Bruno Tulux - Desenvolvedor & Analista de Sistemas">
 </head>
 <body>
-    <!-- Header Section -->
-    <header>
-        <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="Logo">
-        <h2>Meus Links</h2>
-    </header>
+    <div class="background"></div>
+    
+    <div class="container">
+        <!-- Profile Section -->
+        <div class="profile">
+            <div class="logo">
+                <div class="logo-text">BT</div>
+            </div>
+            <h1>Bruno Tulux</h1>
+            <p class="bio">Desenvolvedor & Analista de Sistemas</p>
+            <div class="social-icons">
+                <a href="https://github.com/Kodjaoglanian" class="social-icon" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/in/bruno-kodjaoglanian-cardoso-tulux-a70064274" class="social-icon" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="mailto:brunotulux20@gmail.com" class="social-icon" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
 
-    <ul id="linksList">
-        <li data-tooltip="Acesse meu GitHub">
-            <img src="https://cdn-icons-png.flaticon.com/24/25/25231.png" alt="GitHub Icon" class="icon">
-            <a href="https://github.com/Kodjaoglanian" aria-label="Acesse meu GitHub">Meu GitHub</a>
-        </li>
-        <li data-tooltip="Veja meu Portfólio">
-            <img src="https://cdn-icons-png.flaticon.com/24/266/266025.png" alt="Portfolio Icon" class="icon">
-            <a href="https://kodjaoglanian.github.io/Portfolio/" aria-label="Veja meu Portfólio">Meu Portfólio</a>
-        </li>
-        <li data-tooltip="Use o OrçaFlex">
-            <img src="https://cdn-icons-png.flaticon.com/24/4870/4870942.png" alt="OrçaFlex Engrenagem Icon" class="icon">
-            <a href="https://orca-flex.vercel.app/" aria-label="Use o OrçaFlex">OrçaFlex</a>
-        </li>
-        <li data-tooltip="Use o ByteBite">
-            <img src="https://cdn-icons-png.flaticon.com/24/4870/4870942.png" alt="ByteBite Engrenagem Icon" class="icon">
-            <a href="https://byte-bite.vercel.app/" aria-label="Use o ByteBite">ByteBite</a>
-        </li>
-        <li data-tooltip="Conecte-se no LinkedIn">
-            <img src="https://cdn-icons-png.flaticon.com/24/174/174857.png" alt="LinkedIn Icon" class="icon">
-            <a href="https://linkedin.com/in/bruno-kodjaoglanian-cardoso-tulux-a70064274" aria-label="Conecte-se no LinkedIn">Meu Perfil do Linkedin</a>
-        </li>
-        <li data-tooltip="Enviar Email">
-            <img src="https://cdn-icons-png.flaticon.com/24/732/732200.png" alt="Email Icon" class="icon">
-            <a href="mailto:brunotulux20@gmail.com" aria-label="Enviar Email">Enviar Email</a>
-        </li>
-    </ul>
+        <!-- Links Section -->
+        <div class="links-container">
+            <a href="https://github.com/Kodjaoglanian" class="link-card github" aria-label="Acesse meu GitHub">
+                <div class="card-content">
+                    <div class="link-icon">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <div class="link-content">
+                        <h3>GitHub</h3>
+                        <p>Confira meus projetos e contribuições</p>
+                    </div>
+                    <div class="link-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+            </a>
 
-    <!-- Footer Section -->
-    <footer>
-        &copy; 2024 Bruno Kodjaoglanian. Todos os direitos reservados.
-        <!-- Simplified footer without additional links -->
-        <p>Desenvolvido com ❤️ por Bruno</p>
-    </footer>
+            <a href="https://kodjaoglanian.github.io/Portfolio/" class="link-card portfolio" aria-label="Veja meu Portfólio">
+                <div class="card-content">
+                    <div class="link-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <div class="link-content">
+                        <h3>Portfólio</h3>
+                        <p>Conheça meus principais trabalhos</p>
+                    </div>
+                    <div class="link-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+            </a>
 
-    <!-- Back to Top Button -->
-    <button id="backToTop" aria-label="Voltar ao Topo">↑</button>
+            <a href="https://orca-flex.vercel.app/" class="link-card orcaflex" aria-label="Use o OrçaFlex">
+                <div class="card-content">
+                    <div class="link-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <div class="link-content">
+                        <h3>OrçaFlex</h3>
+                        <p>Ferramenta para orçamentos detalhados</p>
+                    </div>
+                    <div class="link-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+            </a>
+
+            <a href="https://byte-bite.vercel.app/" class="link-card bytebite" aria-label="Use o ByteBite">
+                <div class="card-content">
+                    <div class="link-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <div class="link-content">
+                        <h3>ByteBite</h3>
+                        <p>Planejamento de dietas e refeições</p>
+                    </div>
+                    <div class="link-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+            </a>
+
+            <a href="https://linkedin.com/in/bruno-kodjaoglanian-cardoso-tulux-a70064274" class="link-card linkedin" aria-label="Conecte-se no LinkedIn">
+                <div class="card-content">
+                    <div class="link-icon">
+                        <i class="fab fa-linkedin-in"></i>
+                    </div>
+                    <div class="link-content">
+                        <h3>LinkedIn</h3>
+                        <p>Conecte-se comigo profissionalmente</p>
+                    </div>
+                    <div class="link-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+            </a>
+
+            <a href="mailto:brunotulux20@gmail.com" class="link-card email" aria-label="Enviar Email">
+                <div class="card-content">
+                    <div class="link-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="link-content">
+                        <h3>Email</h3>
+                        <p>Entre em contato para oportunidades</p>
+                    </div>
+                    <div class="link-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p class="copyright">&copy; 2024 Bruno Tulux</p>
+            <div class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
+                <div class="toggle-track">
+                    <div class="toggle-icon moon"><i class="fas fa-moon"></i></div>
+                    <div class="toggle-icon sun"><i class="fas fa-sun"></i></div>
+                    <div class="toggle-thumb"></div>
+                </div>
+            </div>
+        </footer>
+    </div>
 
     <script src="scripts.js"></script>
 </body>
